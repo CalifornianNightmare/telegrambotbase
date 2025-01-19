@@ -2,6 +2,8 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+from config import DATABASE_DEFAULT
+
 Base = declarative_base()
 
 class User(Base):
@@ -13,7 +15,7 @@ class User(Base):
     last_name = Column(String)
 
 class Database:
-    def __init__(self, db_name='sqlite:///users.db'):
+    def __init__(self, db_name=DATABASE_DEFAULT):
         self.engine = create_engine(db_name)
         Base.metadata.create_all(self.engine)
         self.Session = sessionmaker(bind=self.engine)

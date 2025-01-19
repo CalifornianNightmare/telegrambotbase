@@ -1,4 +1,5 @@
 This is the telegram bot base I use.
 
 config.py setup:
-TOKEN = "your_token_id"s
+TOKEN = "your_token_id"
+DATABASE_DEFAULT = 'sqlite:///databases/users.db'

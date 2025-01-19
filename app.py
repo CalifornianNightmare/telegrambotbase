@@ -1,8 +1,8 @@
 from config import TOKEN
 import logging
-from bot import TelegramBot
-from menu import BotMenu
-from database import Database
+from app.bot import TelegramBot
+from app.menu import BotMenu
+from app.database import Database
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
